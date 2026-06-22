@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.env
+.venv/
+response_out.txt
+AI/**/response_out.txt
