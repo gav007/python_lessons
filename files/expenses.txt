@@ -1,0 +1,7 @@
+coffee, 3.50
+bus fare, 2.00
+lunch, 8.75
+bad line here
+phone credit, 20
+rent, 950.00
+snacks, not_a_number

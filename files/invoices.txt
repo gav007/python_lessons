@@ -1,0 +1,7 @@
+INV001, Acme Supplies, 145.50, PAID
+INV002, Dublin Print Co, 89.99, UNPAID
+INV003, OfficeMart, not_a_number, PAID
+bad broken line
+INV004, City Couriers, 220.00, UNPAID
+INV005, TechFix Ltd, 75.25, PAID
+INV006, PaperHouse, 42.10, UNKNOWN
