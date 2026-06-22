@@ -2,52 +2,76 @@
 
 General purpose repo for recording Python sessions.
 
-## Overview
+## Summary of repository contents
 
-This repository contains notes, examples, and exercises used during Python learning sessions. It's intended as a personal/teaching workspace to collect scripts, Jupyter notebooks, and short explanations of concepts.
+This README has been updated to reflect the files and folders currently in this repository (as of 2026-06-22).
 
-## Suggested Repository Structure
+Root files
+- .gitignore — ignored files/dirs for the project
+- README.md — (this file)
 
-- lessons/        — session notes and Jupyter notebooks
-- exercises/      — practice problems and solutions
-- examples/       — small example scripts and demos
-- requirements.txt — optional Python dependencies
+Top-level directories
+- AI/ — small AI-related examples and prompt playground
+  - AI/fake_ai.py — toy example for an AI-like interface
+  - AI/ollama_ai.py — placeholder (empty)
+  - AI/01_prompt_playground/ — prompt-playground folder
 
-> If any of these directories don't exist yet, feel free to create them as you add content.
+- dictionaries/ — short example scripts demonstrating Python dictionaries
+  - 01_basic_lookup.py
+  - 02_update_values.py
+  - 03_count_items.py
+  - 04_group_totals.py
+  - 05_weak_topics.py
+  - 06_nested_dictionaries.py
+  - 07_inventory_tracker.py
+  - 08_inventory_with_functions.py
 
-## Getting started
+- files/ — example data files and utility scripts
+  - expenses.py — script for processing expenses (example)
+  - expenses.txt — example input data for expenses.py
+  - expenses_output.txt — sample output from expenses.py
+  - invoice_cleaner.py — data-cleaning helper for invoices
+  - invoices.txt — example invoice lines
+  - service_log.txt — (empty log placeholder)
+  - suspicious_logins.txt — (empty log placeholder)
+  - NOTE: there is a malformed filename in this folder whose name appears to include invoice lines; consider removing or renaming that file (it looks like content was used as the filename by mistake).
 
-1. Install Python 3.8+ (or your preferred supported version).
-2. (Optional) Create and activate a virtual environment:
+- functions/ — small example functions and helper scripts
+  - .gitkeep
+  - coffee_tier.py — example function(s) related to coffee pricing/tiers
+  - signal_log.txt — sample log of signals
+  - signal_scanner.py — example script to scan signal logs
+  - study_minutes.py — small helper to track study time / minutes
 
-   python -m venv .venv
-   source .venv/bin/activate  # macOS/Linux
-   .venv\Scripts\activate    # Windows (PowerShell)
 
-3. If the repo has a requirements.txt file, install dependencies:
+## How to use the scripts
 
-   pip install -r requirements.txt
+General notes
+- These examples are plain Python scripts; they should run with Python 3.8+.
+- No requirements.txt is present; if you add third-party dependencies later, add a requirements.txt at project root.
 
-4. Open or run files as needed:
-   - Run simple scripts: `python examples/example.py`
-   - Open notebooks: `jupyter notebook` or `jupyter lab`
+Run a script
+- From the repository root run:
 
-## Contributing
+    python files/expenses.py
 
-Contributions are welcome. Recommended workflow:
+- Or run any other script similarly, for example:
 
-1. Create a new branch for your work.
-2. Add or update files in the appropriate folder.
-3. Open a pull request describing your changes.
+    python files/invoice_cleaner.py
+    python functions/coffee_tier.py
 
-Keep code simple and include brief comments in lessons to explain concepts.
+Check file contents before running if unsure. Some files (service_log.txt, suspicious_logins.txt, AI/ollama_ai.py) are currently empty placeholders.
 
-## License
+## Recommended next steps
 
-Add a LICENSE file to declare the repository license. If you don't add one, the repository has no explicit license.
+- Clean up filenames in files/ (rename or remove the file whose name contains invoice lines). Having proper filenames makes the repo easier to use.
+- Add a brief README in each subdirectory (e.g., dictionaries/README.md) describing the purpose and how to run the examples in that folder.
+- If you want runnable examples, add a small README or top-level examples/ folder with clear input → output examples.
+- Consider adding a requirements.txt if any examples depend on external packages.
+- Add a LICENSE file to make the project license explicit.
+
 
 ## Contact
 
 Repository owner: @gav007
-
 
