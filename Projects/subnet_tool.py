@@ -110,7 +110,13 @@ def display_input_summary(first, second, third, fourth, cidr, submask, interesti
     print(f"Block Size: {block_size}")
     print()
     
+def host_bits(cidr):
+    host_bit = 32 - cidr
+    total_address = 2 ** host_bit
+    hosts = total_address -2
     
+    return total_address, hosts
+ 
 def get_network_start(block_size):
     network_addresses = []
 
@@ -122,11 +128,13 @@ def get_network_start(block_size):
 
     return network_addresses
 
-def display_network_addresses(first, second, third, network_starts, interesting_oct, block_size):
+def display_network_addresses(first, second, third, network_starts, interesting_oct, block_size, cidr):
     print("--------------------------------")
     print("Network Addresses")
     print("--------------------------------")
-
+    
+    total_address, hosts = host_bits(cidr)
+    
     if interesting_oct == 4:
         for net_address in network_starts:
             broadcast_num = net_address + block_size -1
@@ -141,17 +149,45 @@ def display_network_addresses(first, second, third, network_starts, interesting_
             print(" - First IP:", first_ip)
             print(" - Last IP:", last_ip)
             print(" - Broadcast:", broadcast)
+            print(" - Total Addresses:", total_address)
+            print(" - Hosts:", hosts)
             print()
 
     elif interesting_oct == 3:
         for net_address in network_starts:
+            broadcast_num = net_address + block_size - 1
+
             ip = f"{first}.{second}.{net_address}.0"
-            print("-", ip)
+            first_ip = f"{first}.{second}.{net_address}.1"
+            last_ip = f"{first}.{second}.{broadcast_num}.254"
+            broadcast = f"{first}.{second}.{broadcast_num}.255"
+            
+
+            print("Network:", ip)
+            print(" - First IP:", first_ip)
+            print(" - Last IP:", last_ip)
+            print(" - Broadcast:", broadcast)
+            print(" - Total Addresses:", total_address)
+            print(" - Hosts:", hosts)
+            print()
+           
 
     elif interesting_oct == 2:
         for net_address in network_starts:
+            broadcast_num = net_address + block_size - 1
+
             ip = f"{first}.{net_address}.0.0"
-            print("-", ip)
+            first_ip = f"{first}.{net_address}.0.1"
+            last_ip = f"{first}.{broadcast_num}.255.254"
+            broadcast = f"{first}.{broadcast_num}.255.255"
+
+            print("Network:", ip)
+            print(" - First IP:", first_ip)
+            print(" - Last IP:", last_ip)
+            print(" - Broadcast:", broadcast)
+            print(" - Total Addresses:", total_address)
+            print(" - Hosts:", hosts)
+            print()
         
     
     
@@ -187,7 +223,7 @@ def main():
     network_starts = get_network_start(block_size)
     
     # print net addresses
-    display_network_addresses(int_first, int_second, int_third, network_starts, interesting_oct, block_size)
+    display_network_addresses(int_first, int_second, int_third, network_starts, interesting_oct, block_size, cidr)
     
 
 if __name__ == "__main__":
