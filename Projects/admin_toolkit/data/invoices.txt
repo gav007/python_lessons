@@ -1,0 +1,31 @@
+INV001,Acme Supplies,145.50,PAID
+INV002,OfficeMart,88.20,UNPAID
+INV003,TechFix Ltd,not_a_number,PAID
+BAD LINE HERE
+INV004,Dublin Print,42.00,QUERY
+INV001,Acme Supplies,145.50,PAID
+INV002,OfficeMart,88.20,UNPAID
+INV003,TechFix Ltd,not_a_number,PAID
+BAD LINE HERE
+INV004,Dublin Print,42.00,QUERY
+INV005,Northside Stationery,220.75,PAID
+INV006,City Cleaning Co,310.00,UNPAID
+INV007,Laptop Repairs,75.25,PAID
+INV008,Paper House,19.99,QUERY
+INV009,Coffee Supplies,56.40,PAID
+INV010,Web Hosting Ireland,120.00,PAID
+INV011,Printer Ink Direct,invalid_amount,UNPAID
+INV012,Desk World,199.99,UNPAID
+INV013,Phone Repairs Dublin,65.00,QUERY
+INV014,Cloud Backup Ltd,25.50,PAID
+INV015,Security Cameras Ltd,410.80,UNPAID
+INV016,Keyboard Shop,39.95,PAID
+INV017,Mouse Mats Ltd,12.99,PAID
+INV018,Training Provider,300.00,QUERY
+INV019,Office Chairs Ltd,180.00,UNPAID
+INV020,Broadband Provider,60.00,PAID
+THIS IS ANOTHER BAD LINE
+INV021,Accounts Software Ltd,89.99,PAID
+INV022,USB Supplies,22.50,UNPAID
+INV023,Monitor Repairs,not_paid_yet,QUERY
+INV024,Stationery Warehouse,150.00,PAID

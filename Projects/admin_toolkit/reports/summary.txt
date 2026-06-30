@@ -1,0 +1,8 @@
+--- SUMMARY ---
+PAID 12
+UNPAID 7
+QUERY 5
+--------------------
+PAID 1141.83
+UNPAID 1299.69
+QUERY 468.99
