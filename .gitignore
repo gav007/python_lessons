@@ -1,7 +1,16 @@
+# Python virtual environments
+venv/
+.venv/
+
+# Python cache
 __pycache__/
 *.pyc
+
+# Secrets
 .env
-.venv/
-response_out.txt
-AI/**/response_out.txt
-"C:\Code\pythonPractice\claude_python_learning_guide_for_gav.md"
+
+# Editor/system junk
+.vscode/
+.DS_Store
+Thumbs.db
+

@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
     <title>The Movie Hub</title>
   </head>
 
@@ -23,6 +24,11 @@
           <!--Button-->
           <button type="submit">Search</button>
         </form>
+
+        <!--IfError-->
+        {% if error %}
+        <p>{{ error }}</p>
+        {% endif %}
 
         <!--OutputFields-->
         <h3>Title</h3>

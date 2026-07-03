@@ -32,6 +32,12 @@ def search():
     # get json data
     data = response.json()
     
+    if data.get("Response") == "False":
+        return render_template(
+            "index.html",
+            error=data.get("Error")
+        )
+    
     return render_template(
     "index.html",
     title=data.get("Title"),

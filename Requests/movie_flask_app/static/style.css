@@ -1,0 +1,139 @@
+/* Page background */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle, rgba(255, 255, 255, 0.15) 2px, transparent 2px),
+    linear-gradient(135deg, #ffdd00, #ff4d4d);
+  background-size:
+    18px 18px,
+    cover;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  color: #111;
+}
+
+/* Main layout box */
+.main-container {
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Comic title panel */
+.title-box {
+  background: #111;
+  color: #ffdd00;
+  border: 5px solid #000;
+  box-shadow: 8px 8px 0 #ffffff;
+  text-align: center;
+  transform: rotate(-1deg);
+  margin-bottom: 30px;
+}
+
+.title-box h1 {
+  margin: 20px;
+  font-size: 48px;
+  letter-spacing: 3px;
+  text-shadow: 3px 3px 0 #ff0000;
+}
+
+/* Main content panel */
+.display-container {
+  background: #ffffff;
+  border: 5px solid #000;
+  box-shadow: 10px 10px 0 #111;
+  padding: 25px;
+}
+
+/* Search form */
+form {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  padding: 15px;
+  background: #00aaff;
+  border: 4px solid #000;
+  box-shadow: 5px 5px 0 #111;
+}
+
+label {
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+input {
+  flex: 1;
+  min-width: 220px;
+  padding: 12px;
+  border: 3px solid #000;
+  font-size: 18px;
+  background: #fffbe6;
+}
+
+button {
+  padding: 12px 20px;
+  border: 3px solid #000;
+  background: #ffdd00;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 #111;
+}
+
+button:hover {
+  background: #ff4d4d;
+  color: white;
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #111;
+}
+
+/* Field headings */
+.display-container h3 {
+  display: inline-block;
+  margin: 18px 0 8px;
+  padding: 6px 12px;
+  background: #ffdd00;
+  border: 3px solid #000;
+  box-shadow: 3px 3px 0 #111;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* The movie data paragraphs directly after h3 */
+.display-container h3 + p {
+  margin: 0 0 18px;
+  padding: 15px;
+  background: #fffbe6;
+  border: 3px solid #000;
+  box-shadow: 5px 5px 0 #111;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Empty result fields before a search */
+.display-container h3 + p:empty::before {
+  content: "Awaiting search...";
+  opacity: 0.45;
+  font-style: italic;
+}
+
+/* Make key fields pop a bit */
+#movie-title {
+  font-size: 24px;
+  font-weight: bold;
+  background: #ffffff;
+}
+
+#movie-rating {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff0000;
+}
+
+#movie-plot {
+  font-style: italic;
+}
