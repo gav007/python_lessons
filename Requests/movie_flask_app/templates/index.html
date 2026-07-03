@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Movie Hub</title>
+  </head>
+
+  <body>
+    <!--MainContainer-->
+    <div class="main-container">
+      <div class="title-box">
+        <h1>MOVIE INFO</h1>
+      </div>
+
+      <!--SubContainer-->
+      <div class="display-container">
+        <!--FormEntry-->
+        <form method="POST" action="/search">
+          <label for="movie-input">Enter your movie</label>
+          <!--TextBoxEntry-->
+          <input type="text" name="movie" id="movie-input" />
+          <!--Button-->
+          <button type="submit">Search</button>
+        </form>
+
+        <!--OutputFields-->
+        <h3>Title</h3>
+        <p id="movie-title">{{ title }}</p>
+
+        <h3>Year</h3>
+        <p id="movie-year">{{ year }}</p>
+
+        <h3>Director</h3>
+        <p id="movie-director">{{ director }}</p>
+
+        <h3>Genre</h3>
+        <p id="movie-genre">{{ genre }}</p>
+
+        <h3>Rating</h3>
+        <p id="movie-rating">{{ rating }}</p>
+
+        <h3>Plot</h3>
+        <p id="movie-plot">{{ plot }}</p>
+
+        <h3>Box-Office</h3>
+        <p id="movie-box">{{ box_office}}</p>
+      </div>
+    </div>
+  </body>
+</html>
