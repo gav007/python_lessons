@@ -1,0 +1,22 @@
+1. What does an HTTP `GET` request mean?
+   - Requets data from the server
+2. Why should the API key be stored outside the Python file?
+   - This is to keep the api key secret
+3. What Python data type does JSON become after `response.json()`?
+   - Looks like a dictionary to me
+4. Why do we check for request errors before extracting values?
+   - didn't do that... I found this a little too hard, sorry.
+5. Where in the JSON did you find humidity?
+   - 'main': {'feels_like': 19.82,
+          'grnd_level': 1011,
+          'humidity': 68,
+          'pressure': 1026,
+          'sea_level': 1026,
+          'temp': 19.99,
+          'temp_max': 20.71,
+          'temp_min': 18.12},
+
+6. Why is `weather` a list even though there is usually only one main description?
+   - not sure sorry
+7. What would you change if you wanted weather for a different city?
+   - change the lon and lat values. 
