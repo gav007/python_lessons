@@ -1,0 +1,25 @@
+ovie_title = "Jaws"
+movie_year = "1975"
+
+html = f"""
+<!doctype html>
+<html>
+  <head>
+    <title>Movie Output</title>
+  </head>
+  <body>
+    <h1>Movie Info</h1>
+
+    <h3>Title</h3>
+    <p>{movie_title}</p>
+
+    <h3>Year</h3>
+    <p>{movie_year}</p>
+  </body>
+</html>
+"""
+
+with open("movie_output.html", "w") as file:
+    file.write(html)
+
+print("Created movie_output.html")
