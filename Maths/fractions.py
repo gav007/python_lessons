@@ -43,7 +43,7 @@ gcd = 1
 
 smallest = min(sum_adder, common)
 
-for i in range(2, smallest):
+for i in range(2, smallest + 1):
     if sum_adder % i == 0 and common % i == 0:
         gcd = i
 
