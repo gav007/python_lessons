@@ -1,0 +1,4 @@
+R1 = up
+SW1 = down
+AP1 = up
+SW2 = up

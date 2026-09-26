@@ -1,0 +1,6 @@
+R1 up
+SW1 down
+BROKENLINE
+AP1 up
+R2 
+SW2 up

@@ -1,0 +1,5 @@
+R1 up
+SW1 down
+AP1 up
+R2 down
+SW2 up
