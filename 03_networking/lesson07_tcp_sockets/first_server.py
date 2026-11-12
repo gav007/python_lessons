@@ -18,6 +18,7 @@ while True:
 
     # listen for the bytes
     data = conn.recv(1024) 
+    
 
     # reply with echo
     conn.send(data)
